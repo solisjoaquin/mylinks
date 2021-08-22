@@ -1,7 +1,7 @@
 import React from "react";
 import { useUser, withPageAuthRequired } from "@auth0/nextjs-auth0";
 
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 
 export default function Profile() {
   const { user, error, isLoading } = useUser();
