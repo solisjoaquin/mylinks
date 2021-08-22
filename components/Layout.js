@@ -14,19 +14,6 @@ const Layout = ({ children }) => (
     <main>
       <div className="container">{children}</div>
     </main>
-
-    <style jsx>{`
-      .container {
-        margin: 1.5rem auto;
-      }
-    `}</style>
-    <style jsx global>{`
-      body {
-        margin: 0;
-        color: #333;
-        font-family: -apple-system, 'Segoe UI';
-      }
-    `}</style>
   </>
 );
 
