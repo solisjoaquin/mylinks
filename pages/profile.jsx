@@ -10,7 +10,9 @@ export default function Profile() {
   return (
     <main className="max-w-5xl mx-auto">
       <Layout>
-        <h1>Protected Page</h1>
+        <h1 className="order-1 text-3xl sm:text-5xl sm:leading-none font-extrabold tracking-tight mb-4">
+          Profile
+        </h1>
 
         {isLoading && <Loader />}
 
@@ -23,8 +25,10 @@ export default function Profile() {
 
         {user && (
           <>
-            <h4>Profile new</h4>
-            <pre>{JSON.stringify(user, null, 2)}</pre>
+            {/* <pre>{JSON.stringify(user, null, 2)}</pre> */}
+
+            <p className="text-lg">Name: {user.name} </p>
+            <p className="text-lg">Email: {user.email} </p>
           </>
         )}
       </Layout>
