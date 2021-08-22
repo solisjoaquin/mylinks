@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useUser } from "@auth0/nextjs-auth0";
 import Layout from "../components/Layout";
 import Cta from "../components/Cta";
+import Loader from "../components/Loader";
 
 export default function Home() {
   const { user, error, isLoading } = useUser();
@@ -14,7 +15,7 @@ export default function Home() {
       </Head>
       <main className="max-w-5xl mx-auto">
         <Layout>
-          {isLoading && <p>Loading login info...</p>}
+          {isLoading && <Loader />}
 
           {error && (
             <>

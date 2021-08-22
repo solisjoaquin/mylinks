@@ -2,6 +2,7 @@ import React from "react";
 import { useUser, withPageAuthRequired } from "@auth0/nextjs-auth0";
 
 import Layout from "../components/Layout";
+import Loader from "../components/Loader";
 
 export default function Profile() {
   const { user, error, isLoading } = useUser();
@@ -11,7 +12,7 @@ export default function Profile() {
       <Layout>
         <h1>Protected Page</h1>
 
-        {isLoading && <p>Loading profile...</p>}
+        {isLoading && <Loader />}
 
         {error && (
           <>
